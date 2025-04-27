@@ -1,0 +1,127 @@
+# Northern Treasures JOIN Challenges
+
+## Challenge Set 1: Basic JOIN Operations
+
+### Challenge 1: Store Management Report
+Write a query to list all stores with their manager's full name.
+
+**Expected Result:**
+- All 12 stores should be displayed
+- Stores 110, 111, and 112 will show NULL for manager name since they don't have assigned managers
+- Output columns: store_id, store_name, city, province, manager_name
+
+### Challenge 2: Product Supplier Analysis
+Write a query to show all products with their supplier information.
+
+**Expected Result:**
+- 24 products will be displayed (product with NULL supplier_id won't appear)
+- Each row will show product details along with the corresponding supplier name and province
+- Output columns: product_id, product_name, category, unit_price, supplier_name, supplier_province
+
+### Challenge 3: Customer Feedback Analysis
+List all customer feedback with store and sale information.
+
+**Expected Result:**
+- All 12 feedback entries will be shown
+- The last two feedback entries (IDs 1011 and 1012) will have NULL values for store name and employee name as they relate to online orders
+- Output columns: feedback_id, rating, comment, store_name, employee_name
+
+## Challenge Set 2: Intermediate JOIN Operations
+
+### Challenge 4: Supervisor Salary Comparison
+Find all employees who earn more than their direct supervisors.
+
+**Expected Result:**
+- The query should identify employees earning more than their supervisors
+- Output columns: employee_name, employee_salary, supervisor_name, supervisor_salary, salary_difference
+
+### Challenge 5: Cross-Provincial Product Analysis
+Identify products sold in Ontario that have never been sold in Quebec.
+
+**Expected Result:**
+- Products that have sales in Ontario (province 'ON') stores but no sales in Quebec (province 'QC') stores
+- Output columns: product_name, category, total_ontario_sales
+
+### Challenge 6: Customer Cross-Channel Behavior
+Find loyalty members who have purchased the same product both in-store and online.
+
+**Expected Result:**
+- Customer name, loyalty tier, product name, in-store purchase date, and online purchase date
+- Only customers who bought identical products through both channels
+- Output columns: customer_name, membership_tier, product_name, store_purchase_date, online_purchase_date
+
+## Challenge Set 3: Advanced JOIN Operations
+
+### Challenge 7: Inventory Optimization Analysis
+Identify stores where inventory levels for products are below restock level but no restock has occurred in the past 60 days.
+
+**Expected Result:**
+- Store name, product name, current quantity, restock level, and days since last restock
+- Only show products where current_quantity < restock_level AND last_restock_date > 60 days ago
+- Output columns: store_name, product_name, current_quantity, restock_level, days_since_restock
+
+### Challenge 8: Regional Management Effectiveness
+Find stores with higher average customer feedback ratings than other stores in the same province.
+
+**Expected Result:**
+- Store name, province, store's average rating, and province average rating
+- Only stores with above-average provincial performance
+- Output columns: store_name, province, store_avg_rating, province_avg_rating, rating_difference
+
+### Challenge 9: Employee Relationship Network
+Find all pairs of employees who share the same supervisor.
+
+**Expected Result:**
+- Pairs of employee names and their shared supervisor name
+- Each pair appears only once (avoid symmetric duplicates)
+- Output columns: employee1_name, employee2_name, supervisor_name
+
+### Challenge 10: Product Affinity Analysis
+Find product pairs that are frequently purchased together in the same transaction.
+
+**Expected Result:**
+- Pairs of product names and the count of times they've been purchased together
+- Ranked by frequency of co-purchase
+- Output columns: product1_name, product2_name, purchase_count
+
+## Challenge Set 4: Expert-Level JOIN Operations
+
+### Challenge 11: Supplier-Region Performance Analysis
+For each supplier, compare the performance of their products in Eastern versus Western Canadian regions.
+
+**Expected Result:**
+- Supplier name, product count, Eastern region sales total, Western region sales total, and percentage difference
+- Ranked by largest regional sales disparity
+- Output columns: supplier_name, product_count, eastern_sales, western_sales, percentage_difference
+
+### Challenge 12: Customer Loyalty Journey
+Track the purchase history and point accumulation timeline for Gold tier customers.
+
+**Expected Result:**
+- Customer name, total purchases, point progression over time, and average spend per visit
+- Only Gold tier members
+- Output columns: customer_name, total_purchases, total_points, average_spend
+
+### Challenge 13: Employee Sales Performance Across Locations
+Find employees who have worked at more than one store and compare their sales performance between locations.
+
+**Expected Result:**
+- Employee name, first store, second store, sales at first store, sales at second store, and performance difference
+- Only employees who have records at multiple store locations
+- Output columns: employee_name, store1_name, store2_name, store1_sales, store2_sales, sales_difference
+
+### Challenge 14: Multi-Channel Pricing Strategy
+Analyze price differences between online and in-store purchases for the same products.
+
+**Expected Result:**
+- Product name, average in-store price, average online price, price difference, and percentage difference
+- Ranked by largest price discrepancies
+- Output columns: product_name, in_store_price, online_price, price_difference, percentage_difference
+
+### Challenge 15: Comprehensive Business Health Dashboard
+Create a provincial performance dashboard showing aggregate metrics for each Canadian province.
+
+**Expected Result:**
+- Province, store count, total sales, average customer rating, top-selling product, and most efficient store
+- Summary statistics that combine multiple join operations
+- Output columns: province, store_count, total_sales, avg_rating, top_product, best_store
